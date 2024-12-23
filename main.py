@@ -19,7 +19,10 @@ def main():
             ret, frame = cap.read()
             if not ret:
                 break
-
+            # else:
+            #     frame_height, frame_width = frame.shape[:2]
+            #     print(f"Frame Width: {frame_width}, Frame Height: {frame_height}")
+            
             frame = cv2.flip(frame, 1)
             frameRGB = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             processed = hands.process(frameRGB)
