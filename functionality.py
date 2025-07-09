@@ -75,5 +75,6 @@ def detect_gesture(frame, landmarks_list, processed):
         if is_left_click(landmarks_list, thumb_ring_dist):
             pyautogui.click(button='left')
 
+        # FUNC 4 --> drag (click and hold)
         if thumb_index_dist <= 30:
             move_mouse(index_finger_tip, "drag")
